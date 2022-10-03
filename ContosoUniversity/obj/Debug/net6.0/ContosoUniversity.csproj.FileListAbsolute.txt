@@ -1,8 +1,0 @@
-E:\Work\Programming Experiments\ASP.NET CORE\ContosoUniversity\ContosoUniversity\obj\Debug\net6.0\ContosoUniversity.csproj.AssemblyReference.cache
-E:\Work\Programming Experiments\ASP.NET CORE\ContosoUniversity\ContosoUniversity\obj\Debug\net6.0\ContosoUniversity.GeneratedMSBuildEditorConfig.editorconfig
-E:\Work\Programming Experiments\ASP.NET CORE\ContosoUniversity\ContosoUniversity\obj\Debug\net6.0\ContosoUniversity.AssemblyInfoInputs.cache
-E:\Work\Programming Experiments\ASP.NET CORE\ContosoUniversity\ContosoUniversity\obj\Debug\net6.0\ContosoUniversity.AssemblyInfo.cs
-E:\Work\Programming Experiments\ASP.NET CORE\ContosoUniversity\ContosoUniversity\obj\Debug\net6.0\ContosoUniversity.csproj.CoreCompileInputs.cache
-E:\Work\Programming Experiments\ASP.NET CORE\ContosoUniversity\ContosoUniversity\obj\Debug\net6.0\ContosoUniversity.MvcApplicationPartsAssemblyInfo.cache
-E:\Work\Programming Experiments\ASP.NET CORE\ContosoUniversity\ContosoUniversity\obj\Debug\net6.0\ContosoUniversity.RazorAssemblyInfo.cache
-E:\Work\Programming Experiments\ASP.NET CORE\ContosoUniversity\ContosoUniversity\obj\Debug\net6.0\ContosoUniversity.RazorAssemblyInfo.cs

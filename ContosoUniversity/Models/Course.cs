@@ -1,6 +1,4 @@
-﻿
-
-namespace ContosoUniversity.Models
+﻿namespace ContosoUniversity.Models
 {
     public class Course
     {

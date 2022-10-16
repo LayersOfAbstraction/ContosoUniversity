@@ -2,3 +2,12 @@
 global using System.ComponentModel.DataAnnotations.Schema;
 global using ContosoUniversity.Data;
 global using Microsoft.EntityFrameworkCore;
+global using System.Collections.Generic;
+global using System;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.Extensions.Logging;
+global using System.Diagnostics;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Hosting;
+global using Microsoft.AspNetCore.Builder;
+global using Microsoft.Extensions.Configuration;

@@ -1,5 +1,6 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
-
+#In appsettings.DataSource use "localhost, 1450" for doing SQLServer database migrations.
+#In appsettings.DataSource use "sqldata" for accessing the SQL Server database through the ASP.NET MVC.
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
 EXPOSE 80

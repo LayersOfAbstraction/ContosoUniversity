@@ -131,6 +131,7 @@ namespace ContosoUniversity.Controllers
                     Assigned = instructorCourses.Contains(course.CourseID)
                 });
             }
+            ViewData["Courses"] = viewModel;
         }
 
         // POST: Instructors/Edit/5

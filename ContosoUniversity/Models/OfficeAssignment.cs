@@ -12,6 +12,6 @@ namespace ContosoUniversity.Models
         [Display(Name = "Office Location")]
         public string Location { get; set;}
 
-        public Instructor Instructor { get; set; }
+        public Instructor? Instructor { get; set; }//<---Had to make this nullable to allow it to pass validation.
     }
 }

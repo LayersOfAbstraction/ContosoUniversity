@@ -11,8 +11,4 @@ namespace ContosoUniversity.Models.SchoolViewModels
         public IEnumerable<Course> Courses { get; set; }
         public IEnumerable<Enrollment> Enrollments { get; set; }
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> UpdateRelatedData

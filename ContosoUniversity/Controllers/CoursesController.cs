@@ -22,12 +22,8 @@ namespace ContosoUniversity.Controllers
         // GET: Courses
         public async Task<IActionResult> Index()
         {
-<<<<<<< HEAD
-            var courses = _context.Courses.Include(c => c.Department)
-=======
             var courses = _context.Courses
                 .Include(c => c.Department)
->>>>>>> UpdateRelatedData
                 .AsNoTracking();
             return View(await courses.ToListAsync());
         }
@@ -52,28 +48,15 @@ namespace ContosoUniversity.Controllers
             return View(course);
         }
 
-<<<<<<< HEAD
-        // GET: Courses/Create
-=======
->>>>>>> UpdateRelatedData
         public IActionResult Create()
         {
             PopulateDepartmentsDropDownList();
             return View();
         }
 
-<<<<<<< HEAD
-        // POST: Courses/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CourseID,Title,Credits,DepartmentID")] Course course)
-=======
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("CourseID,Credits,DepartmentID,Title")] Course course)
->>>>>>> UpdateRelatedData
         {
             if (ModelState.IsValid)
             {
@@ -81,17 +64,9 @@ namespace ContosoUniversity.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-<<<<<<< HEAD
-            PopulateDepartmentsDropDownList();
-            return View(course);
-        }
-
-        // GET: Courses/Edit/5
-=======
             PopulateDepartmentsDropDownList(course.DepartmentID);
             return View(course);
         }
->>>>>>> UpdateRelatedData
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -106,26 +81,13 @@ namespace ContosoUniversity.Controllers
             {
                 return NotFound();
             }
-<<<<<<< HEAD
-
-=======
->>>>>>> UpdateRelatedData
             PopulateDepartmentsDropDownList(course.DepartmentID);
             return View(course);
         }
 
-<<<<<<< HEAD
-        // POST: Courses/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost, ActionName("Edit")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> EditPost(int id)
-=======
         [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> EditPost(int? id)
->>>>>>> UpdateRelatedData
         {
             if (id == null)
             {
@@ -147,22 +109,13 @@ namespace ContosoUniversity.Controllers
                 {
                     //Log the error (uncomment ex variable name and write a log.)
                     ModelState.AddModelError("", "Unable to save changes. " +
-<<<<<<< HEAD
-                "Try again, and if the problem persists, " +
-                "see your system administrator.");
-=======
                         "Try again, and if the problem persists, " +
                         "see your system administrator.");
->>>>>>> UpdateRelatedData
                 }
                 return RedirectToAction(nameof(Index));
             }
             PopulateDepartmentsDropDownList(courseToUpdate.DepartmentID);
-<<<<<<< HEAD
-            return RedirectToAction(nameof(Index));
-=======
             return View(courseToUpdate);
->>>>>>> UpdateRelatedData
         }
 
         private void PopulateDepartmentsDropDownList(object selectedDepartment = null)
@@ -170,11 +123,7 @@ namespace ContosoUniversity.Controllers
             var departmentsQuery = from d in _context.Departments
                                    orderby d.Name
                                    select d;
-<<<<<<< HEAD
-            ViewBag.DepartmentID = new SelectList(departmentsQuery.AsNoTracking(), "Department", "Name", selectedDepartment);
-=======
             ViewBag.DepartmentID = new SelectList(departmentsQuery.AsNoTracking(), "DepartmentID", "Name", selectedDepartment);
->>>>>>> UpdateRelatedData
         }
 
         // GET: Courses/Delete/5

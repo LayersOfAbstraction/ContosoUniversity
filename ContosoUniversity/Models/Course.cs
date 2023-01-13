@@ -18,7 +18,11 @@ namespace ContosoUniversity.Models
 
         public int DepartmentID { get; set; }
 
+<<<<<<< HEAD
         public Department Department { get; set; }
+=======
+        public Department? Department { get; set; }//<---- By default in the tutorial Department was NOT nullable.
+>>>>>>> UpdateRelatedData
         public ICollection<Enrollment>? Enrollments { get; set; }
         public ICollection<CourseAssignment>? CourseAssignments { get; set; }
     }

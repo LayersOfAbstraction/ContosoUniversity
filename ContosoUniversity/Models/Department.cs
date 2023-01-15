@@ -28,6 +28,6 @@ namespace ContosoUniversity.Models
         public byte[] RowVersion { get; set; }
 
         public Instructor Administrator { get; set; }
-        public ICollection<Course> Courses { get; set; }
+        public ICollection<Course>? Courses { get; set; }//<---- By default in the tutorial Courses was NOT nullable.
     }
 }

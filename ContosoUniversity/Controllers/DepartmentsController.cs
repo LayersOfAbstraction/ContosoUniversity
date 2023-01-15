@@ -82,6 +82,7 @@ namespace ContosoUniversity.Controllers
                 .Include(i => i.Administrator)
                 .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.DepartmentID == id);
+
             if (department == null)
             {
                 return NotFound();

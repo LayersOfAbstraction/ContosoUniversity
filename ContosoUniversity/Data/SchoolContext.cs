@@ -21,9 +21,9 @@ namespace ContosoUniversity.Data
         {
             modelBuilder.Entity<Course>().ToTable("tblCourse");
             modelBuilder.Entity<Enrollment>().ToTable("tblEnrollment");
-            modelBuilder.Entity<Student>().ToTable("tblStudent");
+            //modelBuilder.Entity<Student>().ToTable("tblStudent"); <--- This needs to be erased in the ASP.NET MVC with EF Core Tutorial: Implement inheritance for migration to work. #22047
             modelBuilder.Entity<Department>().ToTable("tblDepartment");
-            modelBuilder.Entity<Instructor>().ToTable("tblInstructor");
+            //modelBuilder.Entity<Instructor>().ToTable("tblInstructor"); <--- This needs to be erased in the ASP.NET MVC with EF Core Tutorial: Implement inheritance for migration to work. #22047
             modelBuilder.Entity<OfficeAssignment>().ToTable("tblOfficeAssignment");
             modelBuilder.Entity<CourseAssignment>().ToTable("tblCourseAssignment");
             modelBuilder.Entity<Person>().ToTable("tblPerson");

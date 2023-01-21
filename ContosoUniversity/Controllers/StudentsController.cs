@@ -48,20 +48,26 @@ namespace ContosoUniversity.Controllers
                 students = students.Where(s => s.LastName.Contains(searchString)
                                        || s.FirstMidName.Contains(searchString));
             }
-            switch (sortOrder)
+            
+            if(string.IsNullOrEmpty(sortOrder))
             {
-                case "name_desc":
-                    students = students.OrderByDescending(s => s.LastName);
-                    break;
-                case "Date":
-                    students = students.OrderBy(s => s.EnrollmentDate);
-                    break;
-                case "date_desc":
-                    students = students.OrderByDescending(s => s.EnrollmentDate);
-                    break;
-                default:
-                    students = students.OrderBy(s => s.LastName);
-                    break;
+                sortOrder = "LastName";
+            }
+
+            bool descending = false;
+            if (sortOrder.EndsWith("_desc"))
+            {
+                sortOrder = sortOrder.Substring(0, sortOrder.Length - 5);
+                descending = true;
+            }
+
+            if(descending)
+            {
+                students = students.OrderByDescending(e => EF.Property<object>(e, sortOrder));
+            }
+            else
+            {
+                students = students.OrderByDescending(e => EF.Property<object>(e, sortOrder));
             }
 
             int pageSize = 3;
@@ -81,7 +87,7 @@ namespace ContosoUniversity.Controllers
                     .ThenInclude(e => e.Course)
                 .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.ID == id);
-            if (student == null)
+            if (student == null)//As per AdvancedTopics Tutorial this only selects the TOP 1 row and not the TOP 2.  
             {
                 return NotFound();
             }
